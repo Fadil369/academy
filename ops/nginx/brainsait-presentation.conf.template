@@ -1,0 +1,25 @@
+# Nginx config for serving BrainsAIT interactive presentation
+# Variables to replace:
+#   {{SERVER_NAME}}   e.g., lms.brainsait.com
+#   {{PUBLIC_DIR}}    e.g., /var/www/brainsait-web
+#   {{URL_BASE}}      e.g., /brainsait-demo
+
+server {
+    listen 80;
+    server_name {{SERVER_NAME}};
+
+    # Optional: redirect http->https (uncomment if SSL terminates on same host)
+    # return 301 https://$host$request_uri;
+
+    location {{URL_BASE}}/ {
+        alias {{PUBLIC_DIR}}/;
+        autoindex off;
+        index interactive-presentation.html;
+        add_header Cache-Control "no-store";
+
+        # Basic security headers
+        add_header X-Content-Type-Options nosniff;
+        add_header X-Frame-Options SAMEORIGIN;
+        add_header X-XSS-Protection "1; mode=block";
+    }
+}
