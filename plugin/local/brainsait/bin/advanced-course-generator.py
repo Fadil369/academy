@@ -259,6 +259,9 @@ class AdvancedCourseGenerator:
             with open(module_file, "w") as f:
                 json.dump(module, f, indent=2)
         
+        # Generate interactive presentation HTML
+        self._generate_interactive_presentation(output_dir)
+        
         print(f"Course exported to {output_dir}/")
         return output_dir
     
@@ -292,6 +295,108 @@ class AdvancedCourseGenerator:
 </course>
 """
         return xml_content
+    
+    def _generate_interactive_presentation(self, output_dir):
+        """Generate interactive HTML presentation"""
+        html_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{self.course_data['title']} - Interactive Presentation</title>
+    <style>
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }}
+        .container {{ max-width: 1200px; margin: 0 auto; padding: 20px; }}
+        .header {{ text-align: center; color: white; margin-bottom: 40px; }}
+        .header h1 {{ font-size: 2.5em; margin-bottom: 10px; }}
+        .header p {{ font-size: 1.2em; opacity: 0.9; }}
+        .modules {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }}
+        .module {{ background: rgba(255,255,255,0.95); border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; }}
+        .module:hover {{ transform: translateY(-5px); }}
+        .module h2 {{ color: #333; border-bottom: 3px solid #667eea; padding-bottom: 10px; }}
+        .lesson {{ background: #f8f9fa; margin: 15px 0; padding: 15px; border-radius: 8px; border-left: 4px solid #28a745; }}
+        .lesson h3 {{ margin: 0 0 10px 0; color: #333; }}
+        .lesson-meta {{ color: #666; font-size: 0.9em; }}
+        .assessment {{ background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid #ffc107; }}
+        .nav {{ text-align: center; margin: 40px 0; }}
+        .nav button {{ background: #667eea; color: white; border: none; padding: 12px 24px; margin: 0 10px; border-radius: 5px; cursor: pointer; font-size: 1em; }}
+        .nav button:hover {{ background: #5a67d8; }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>{self.course_data['title']}</h1>
+            <p>{self.course_data['description']}</p>
+            <p><strong>Duration:</strong> {self.course_data.get('estimated_duration', 'Variable')} | <strong>Difficulty:</strong> {self.course_data.get('difficulty', 'Intermediate').title()}</p>
+        </div>
+        
+        <div class="modules">"""
+        
+        for module in self.course_data["modules"]:
+            html_content += f"""
+            <div class="module">
+                <h2>Module {module['id']}: {module['title']}</h2>
+                <p>{module['description']}</p>
+                
+                <div class="lessons">"""
+            
+            for lesson in module["lessons"]:
+                html_content += f"""
+                    <div class="lesson">
+                        <h3>{lesson['title']}</h3>
+                        <div class="lesson-meta">
+                            <strong>Duration:</strong> {lesson['duration']} | 
+                            <strong>Type:</strong> {lesson['type'].replace('_', ' ').title()}
+                        </div>
+                    </div>"""
+            
+            html_content += f"""
+                </div>
+                
+                <div class="assessment">
+                    <h3>📋 Module Assessment</h3>
+                    <p><strong>Type:</strong> {module['assessment']['type'].title()}</p>
+                    <p><strong>Questions:</strong> {len(module['assessment']['questions'])}</p>
+                    <p><strong>Time Limit:</strong> {module['assessment']['time_limit']}</p>
+                    <p><strong>Passing Score:</strong> {module['assessment']['passing_score']}%</p>
+                </div>
+            </div>"""
+        
+        html_content += """
+        </div>
+        
+        <div class="nav">
+            <button onclick="window.print()">🖨️ Print</button>
+            <button onclick="downloadBackup()">📥 Download Course Backup</button>
+            <button onclick="location.reload()">🔄 Refresh</button>
+        </div>
+    </div>
+    
+    <script>
+        function downloadBackup() {
+            const link = document.createElement('a');
+            link.href = 'brainsait_ai_course_backup.mbz';
+            link.download = 'brainsait_ai_course_backup.mbz';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        // Add smooth scrolling
+        document.querySelectorAll('.module').forEach(module => {
+            module.addEventListener('click', () => {
+                module.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+    </script>
+</body>
+</html>"""
+        
+        with open(f"{output_dir}/interactive-presentation.html", "w", encoding='utf-8') as f:
+            f.write(html_content)
+        
+        print(f"Interactive presentation generated: {output_dir}/interactive-presentation.html")
 
 if __name__ == "__main__":
     generator = AdvancedCourseGenerator()

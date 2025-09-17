@@ -202,8 +202,27 @@ class MoodleCoursePackager:
                 activity_id += 1
     
     def _copy_resource_files(self):
-        shutil.copy(f"{self.course_dir}/interactive-presentation.html", 
-                   f"{self.package_dir}/files/presentation.html")
+        # Copy the interactive presentation if it exists
+        presentation_path = f"{self.course_dir}/interactive-presentation.html"
+        if os.path.exists(presentation_path):
+            shutil.copy(presentation_path, f"{self.package_dir}/files/presentation.html")
+        else:
+            # Create a basic presentation if missing
+            with open(f"{self.package_dir}/files/presentation.html", 'w') as f:
+                f.write("""
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BrainsAIT AI Course</title>
+    <style>body { font-family: Arial, sans-serif; margin: 40px; }</style>
+</head>
+<body>
+    <h1>AI-Powered Content Creation Course</h1>
+    <p>Course content generated successfully. Import the .mbz file into Moodle to access all materials.</p>
+</body>
+</html>
+                """)
+        
         with open(f"{self.package_dir}/files/index.html", 'w') as f:
             f.write("""
 <!DOCTYPE html>
