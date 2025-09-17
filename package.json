@@ -1,0 +1,13 @@
+{
+  "name": "academy",
+  "version": "1.0.0",
+  "description": "Academy educational project",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "keywords": ["education", "academy", "learning"],
+  "author": "Fadil369",
+  "license": "MIT"
+}
