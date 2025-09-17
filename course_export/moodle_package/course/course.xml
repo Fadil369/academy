@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<course id="1" contextid="1">
+  <shortname>AI_CONTENT_2025</shortname>
+  <fullname>AI-Powered Content Creation and LMS Integration</fullname>
+  <idnumber>BRAINSAIT_AI_001</idnumber>
+  <summary>A comprehensive course covering AI content generation, MCP integration, and Moodle deployment for modern educational technology.</summary>
+  <summaryformat>1</summaryformat>
+  <format>topics</format>
+  <showgrades>1</showgrades>
+  <newsitems>5</newsitems>
+  <startdate>1758111682</startdate>
+  <enddate>0</enddate>
+  <marker>0</marker>
+  <maxbytes>0</maxbytes>
+  <legacyfiles>0</legacyfiles>
+  <showreports>0</showreports>
+  <visible>1</visible>
+  <groupmode>0</groupmode>
+  <groupmodeforce>0</groupmodeforce>
+  <defaultgroupingid>0</defaultgroupingid>
+  <lang />
+  <theme />
+  <timecreated>1758111682</timecreated>
+  <timemodified>1758111682</timemodified>
+  <requested>0</requested>
+  <enablecompletion>1</enablecompletion>
+  <completionnotify>0</completionnotify>
+  <cacherev>1758111682</cacherev>
+</course>

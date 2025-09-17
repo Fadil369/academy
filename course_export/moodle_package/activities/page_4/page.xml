@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<activity id="4" moduleid="4" modulename="page" contextid="104">
+  <page id="4">
+    <name>Understanding MCP Architecture</name>
+    <intro>Lesson from Model Context Protocol (MCP) Integration</intro>
+    <introformat>1</introformat>
+    <content>
+            &lt;h2&gt;Model Context Protocol (MCP) Architecture&lt;/h2&gt;
+            
+            &lt;div class="architecture-diagram"&gt;
+                &lt;h3&gt;System Architecture Overview&lt;/h3&gt;
+                &lt;p&gt;MCP provides a standardized way for AI models to communicate with educational platforms.&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="technical-details"&gt;
+                &lt;h3&gt;Core Components&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;strong&gt;Protocol Layer&lt;/strong&gt;: Standardized communication interface&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;Model Adapters&lt;/strong&gt;: Integration with various AI models&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;Content Processors&lt;/strong&gt;: Transform and validate generated content&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;LMS Connectors&lt;/strong&gt;: Direct integration with learning platforms&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="code-example"&gt;
+                &lt;h3&gt;Configuration Example&lt;/h3&gt;
+                &lt;pre&gt;&lt;code&gt;{
+    "mcp_version": "1.0",
+    "model_endpoint": "https://api.brainsait.com/v1/generate",
+    "content_types": ["lesson", "assessment", "quiz"],
+    "output_format": "moodle_compatible"
+}&lt;/code&gt;&lt;/pre&gt;
+            &lt;/div&gt;
+            </content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast />
+    <display>5</display>
+    <displayoptions>a:1:{s:12:"printheading";s:1:"1";}</displayoptions>
+    <revision>1</revision>
+    <timemodified>1758111682</timemodified>
+  </page>
+</activity>

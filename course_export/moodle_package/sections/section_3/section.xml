@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section id="3">
+  <number>3</number>
+  <name>Module 3: Moodle Integration</name>
+  <summary>Implementing AI content generation in Moodle LMS</summary>
+  <summaryformat>1</summaryformat>
+  <sequence />
+  <visible>1</visible>
+  <availabilityjson />
+  <timemodified>1758111682</timemodified>
+</section>

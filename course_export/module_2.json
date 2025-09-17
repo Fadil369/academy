@@ -1,0 +1,59 @@
+{
+  "id": 2,
+  "title": "Model Context Protocol (MCP) Integration",
+  "description": "Deep dive into MCP for seamless AI integration",
+  "lessons": [
+    {
+      "title": "Understanding MCP Architecture",
+      "content": "\n            <h2>Model Context Protocol (MCP) Architecture</h2>\n            \n            <div class=\"architecture-diagram\">\n                <h3>System Architecture Overview</h3>\n                <p>MCP provides a standardized way for AI models to communicate with educational platforms.</p>\n            </div>\n            \n            <div class=\"technical-details\">\n                <h3>Core Components</h3>\n                <ul>\n                    <li><strong>Protocol Layer</strong>: Standardized communication interface</li>\n                    <li><strong>Model Adapters</strong>: Integration with various AI models</li>\n                    <li><strong>Content Processors</strong>: Transform and validate generated content</li>\n                    <li><strong>LMS Connectors</strong>: Direct integration with learning platforms</li>\n                </ul>\n            </div>\n            \n            <div class=\"code-example\">\n                <h3>Configuration Example</h3>\n                <pre><code>{\n    \"mcp_version\": \"1.0\",\n    \"model_endpoint\": \"https://api.brainsait.com/v1/generate\",\n    \"content_types\": [\"lesson\", \"assessment\", \"quiz\"],\n    \"output_format\": \"moodle_compatible\"\n}</code></pre>\n            </div>\n            ",
+      "duration": "40 minutes",
+      "type": "technical_lecture"
+    },
+    {
+      "title": "Implementing MCP in Educational Systems",
+      "content": "<h2>Mcp Implementation</h2><p>Comprehensive content about MCP implementation will be generated here.</p>",
+      "duration": "45 minutes",
+      "type": "coding_tutorial"
+    },
+    {
+      "title": "Best Practices and Security",
+      "content": "<h2>Mcp Security</h2><p>Comprehensive content about MCP security will be generated here.</p>",
+      "duration": "30 minutes",
+      "type": "case_study"
+    }
+  ],
+  "assessment": {
+    "type": "mixed",
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "question": "What is the primary benefit of MCP integration?",
+        "options": [
+          "A) Cost reduction",
+          "B) Improved quality",
+          "C) Faster delivery",
+          "D) All of the above"
+        ],
+        "correct": "D",
+        "explanation": "MCP integration provides multiple benefits including cost reduction, improved quality, and faster delivery."
+      },
+      {
+        "type": "short_answer",
+        "question": "Explain how MCP integration can be implemented in your educational context.",
+        "sample_answer": "Implementation of MCP integration requires careful planning, appropriate tools, and gradual integration."
+      },
+      {
+        "type": "practical",
+        "question": "Create a simple implementation plan for MCP integration.",
+        "requirements": [
+          "Identify use cases",
+          "Select tools",
+          "Define success metrics",
+          "Plan rollout strategy"
+        ]
+      }
+    ],
+    "passing_score": 80,
+    "time_limit": "30 minutes"
+  }
+}

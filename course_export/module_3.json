@@ -1,0 +1,59 @@
+{
+  "id": 3,
+  "title": "Moodle Integration and Deployment",
+  "description": "Implementing AI content generation in Moodle LMS",
+  "lessons": [
+    {
+      "title": "Moodle Plugin Development",
+      "content": "<h2>Moodle Plugins</h2><p>Comprehensive content about Moodle plugins will be generated here.</p>",
+      "duration": "50 minutes",
+      "type": "development_workshop"
+    },
+    {
+      "title": "Automated Content Delivery",
+      "content": "<h2>Content Delivery</h2><p>Comprehensive content about content delivery will be generated here.</p>",
+      "duration": "35 minutes",
+      "type": "practical_exercise"
+    },
+    {
+      "title": "Performance Optimization",
+      "content": "<h2>Performance Optimization</h2><p>Comprehensive content about performance optimization will be generated here.</p>",
+      "duration": "40 minutes",
+      "type": "optimization_lab"
+    }
+  ],
+  "assessment": {
+    "type": "mixed",
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "question": "What is the primary benefit of Moodle integration?",
+        "options": [
+          "A) Cost reduction",
+          "B) Improved quality",
+          "C) Faster delivery",
+          "D) All of the above"
+        ],
+        "correct": "D",
+        "explanation": "Moodle integration provides multiple benefits including cost reduction, improved quality, and faster delivery."
+      },
+      {
+        "type": "short_answer",
+        "question": "Explain how Moodle integration can be implemented in your educational context.",
+        "sample_answer": "Implementation of Moodle integration requires careful planning, appropriate tools, and gradual integration."
+      },
+      {
+        "type": "practical",
+        "question": "Create a simple implementation plan for Moodle integration.",
+        "requirements": [
+          "Identify use cases",
+          "Select tools",
+          "Define success metrics",
+          "Plan rollout strategy"
+        ]
+      }
+    ],
+    "passing_score": 80,
+    "time_limit": "30 minutes"
+  }
+}

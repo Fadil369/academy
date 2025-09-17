@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<moodle_backup>
+  <information>
+    <name>AI-Powered Content Creation Course</name>
+    <moodle_version>2023100900</moodle_version>
+    <moodle_release>4.3</moodle_release>
+    <backup_version>2023100900</backup_version>
+    <backup_release>4.3</backup_release>
+    <backup_date>1758111682</backup_date>
+    <mnet_remoteusers>0</mnet_remoteusers>
+    <include_file_references_to_external_content>0</include_file_references_to_external_content>
+    <original_wwwroot>https://lms.brainsait.com</original_wwwroot>
+    <original_site_identifier_hash>brainsait_academy</original_site_identifier_hash>
+    <original_course_id>1</original_course_id>
+    <original_course_format>topics</original_course_format>
+    <original_course_fullname>AI-Powered Content Creation and LMS Integration</original_course_fullname>
+    <original_course_shortname>AI_CONTENT_2025</original_course_shortname>
+    <original_course_startdate>1758111682</original_course_startdate>
+    <original_course_contextid>1</original_course_contextid>
+    <original_system_contextid>1</original_system_contextid>
+  </information>
+  <details>
+    <detail backup_id="brainsait_ai_course_1758111682" type="course" format="moodle2" interactive="1" mode="10" execution="1" executiontime="0" />
+  </details>
+  <contents>
+    <activities>
+      <activity moduleid="1" sectionid="1" modulename="page" title="Lesson 1" directory="activities/page_1" />
+      <activity moduleid="2" sectionid="1" modulename="page" title="Lesson 2" directory="activities/page_2" />
+      <activity moduleid="3" sectionid="1" modulename="quiz" title="Module 1 Assessment" directory="activities/quiz_3" />
+      <activity moduleid="4" sectionid="2" modulename="page" title="Lesson 4" directory="activities/page_4" />
+      <activity moduleid="5" sectionid="2" modulename="page" title="Lesson 5" directory="activities/page_5" />
+      <activity moduleid="6" sectionid="2" modulename="quiz" title="Module 2 Assessment" directory="activities/quiz_6" />
+      <activity moduleid="7" sectionid="3" modulename="page" title="Lesson 7" directory="activities/page_7" />
+      <activity moduleid="8" sectionid="3" modulename="page" title="Lesson 8" directory="activities/page_8" />
+      <activity moduleid="9" sectionid="3" modulename="quiz" title="Module 3 Assessment" directory="activities/quiz_9" />
+      <activity moduleid="10" sectionid="4" modulename="page" title="Lesson 10" directory="activities/page_10" />
+      <activity moduleid="11" sectionid="4" modulename="page" title="Lesson 11" directory="activities/page_11" />
+      <activity moduleid="12" sectionid="4" modulename="quiz" title="Module 4 Assessment" directory="activities/quiz_12" />
+    </activities>
+    <sections>
+      <section sectionid="0" title="General" directory="sections/section_0" />
+      <section sectionid="1" title="Module 1" directory="sections/section_1" />
+      <section sectionid="2" title="Module 2" directory="sections/section_2" />
+      <section sectionid="3" title="Module 3" directory="sections/section_3" />
+      <section sectionid="4" title="Module 4" directory="sections/section_4" />
+    </sections>
+    <course courseid="1" title="AI-Powered Content Creation and LMS Integration" directory="course" />
+  </contents>
+</moodle_backup>
