@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "content_generator": {
+      "command": "python3",
+      "args": ["/home/ubuntu/content-generator-mcp.py"],
+      "env": {}
+    }
+  }
+}

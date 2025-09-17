@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainSAIT Moodle Theme</title>
+    <link rel="stylesheet" href="moodle-theme.css">
+</head>
+<body>
+    <nav class="q-nav">
+        <div class="inner q-container">
+            <div class="q-brand"><img src="/assets/logo.png" alt="BrainSAIT"> Q Business</div>
+            <div class="actions">
+                <button class="q-btn ghost" id="themeToggle">Toggle Theme</button>
+                <button class="q-btn primary">New Project</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="q-container">
+        <div class="q-grid cols-3">
+            <section class="q-card">
+                <h3>Pipeline</h3>
+                <p class="meta">Active leads this week</p>
+                <div class="mt-4 q-table-wrap">
+                    <table class="q-table">
+                        <thead><tr><th>Client</th><th>Stage</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>Gov Dept</td><td>Proposal</td><td><span class="status ok">OK</span></td></tr>
+                            <tr><td>Clinic A</td><td>POC</td><td><span class="status bad">Blocked</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="q-card glass">
+                <h3>Quick Action</h3>
+                <div class="q-field">
+                    <label class="q-label">Project Name (اسم المشروع)</label>
+                    <input class="q-input" placeholder="e.g., Mutasil Gov Portal">
+                    <div class="q-help">Auto-provisioned to your workspace.</div>
+                </div>
+                <button class="q-btn primary">Create</button>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            html.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+        });
+    </script>
+</body>
+</html>
