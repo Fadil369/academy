@@ -1,0 +1,59 @@
+{
+  "id": 1,
+  "title": "Introduction to AI-Powered Content Creation",
+  "description": "Understanding the fundamentals of AI in educational content",
+  "lessons": [
+    {
+      "title": "What is AI-Powered Content Creation?",
+      "content": "\n            <h2>Understanding AI-Powered Content Creation</h2>\n            \n            <div class=\"learning-objectives\">\n                <h3>Learning Objectives</h3>\n                <ul>\n                    <li>Define AI-powered content creation and its core components</li>\n                    <li>Identify key applications in educational technology</li>\n                    <li>Understand the workflow from input to output</li>\n                </ul>\n            </div>\n            \n            <div class=\"content-section\">\n                <h3>What is AI-Powered Content Creation?</h3>\n                <p>AI-powered content creation leverages machine learning models to automatically generate educational materials, including text, assessments, and interactive elements. This technology transforms how educators develop and deliver content.</p>\n                \n                <div class=\"key-concepts\">\n                    <h4>Key Components:</h4>\n                    <ul>\n                        <li><strong>Natural Language Processing (NLP)</strong>: Understanding and generating human-like text</li>\n                        <li><strong>Content Templates</strong>: Structured frameworks for consistent output</li>\n                        <li><strong>Context Awareness</strong>: Adapting content to specific learning objectives</li>\n                        <li><strong>Quality Assurance</strong>: Automated validation and optimization</li>\n                    </ul>\n                </div>\n            </div>\n            \n            <div class=\"interactive-element\">\n                <h3>Try It Yourself</h3>\n                <p>Use our AI content generator to create a lesson outline for your subject area.</p>\n                <div class=\"code-example\">\n                    <pre><code>python3 content-generator-mcp.py --topic \"Your Topic\" --type lesson</code></pre>\n                </div>\n            </div>\n            ",
+      "duration": "30 minutes",
+      "type": "video_lecture"
+    },
+    {
+      "title": "Benefits and Use Cases",
+      "content": "<h2>Ai Content Benefits</h2><p>Comprehensive content about AI content benefits will be generated here.</p>",
+      "duration": "25 minutes",
+      "type": "interactive_presentation"
+    },
+    {
+      "title": "Tools and Technologies Overview",
+      "content": "<h2>Ai Content Tools</h2><p>Comprehensive content about AI content tools will be generated here.</p>",
+      "duration": "35 minutes",
+      "type": "hands_on_demo"
+    }
+  ],
+  "assessment": {
+    "type": "mixed",
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "question": "What is the primary benefit of AI fundamentals?",
+        "options": [
+          "A) Cost reduction",
+          "B) Improved quality",
+          "C) Faster delivery",
+          "D) All of the above"
+        ],
+        "correct": "D",
+        "explanation": "AI fundamentals provides multiple benefits including cost reduction, improved quality, and faster delivery."
+      },
+      {
+        "type": "short_answer",
+        "question": "Explain how AI fundamentals can be implemented in your educational context.",
+        "sample_answer": "Implementation of AI fundamentals requires careful planning, appropriate tools, and gradual integration."
+      },
+      {
+        "type": "practical",
+        "question": "Create a simple implementation plan for AI fundamentals.",
+        "requirements": [
+          "Identify use cases",
+          "Select tools",
+          "Define success metrics",
+          "Plan rollout strategy"
+        ]
+      }
+    ],
+    "passing_score": 80,
+    "time_limit": "30 minutes"
+  }
+}

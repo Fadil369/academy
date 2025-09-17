@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainsAIT Academy - AI Course Demo</title>
+    <meta name="description" content="Experience our AI-powered content creation course with interactive presentations and comprehensive learning materials.">
+    <meta name="keywords" content="AI, Machine Learning, Content Creation, LMS, Moodle, Education Technology">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+        }
+        
+        .hero-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+        }
+        
+        .hero-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .hero-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .access-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .access-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .access-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .access-card p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .access-btn {
+            background: white;
+            color: #667eea;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .access-btn:hover {
+            background: #f8f9fa;
+            transform: scale(1.05);
+        }
+        
+        .stats-section {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e74c3c;
+            display: block;
+        }
+        
+        .live-demo {
+            background: #2ecc71;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .live-demo h3 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .demo-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .demo-link {
+            background: white;
+            color: #2ecc71;
+            padding: 15px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-link:hover {
+            background: #f8f9fa;
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+        }
+        
+        .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .access-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .demo-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 BrainsAIT Academy</h1>
+        <p class="subtitle">AI-Powered Content Creation and LMS Integration</p>
+        
+        <div class="hero-section">
+            <h2>🎯 Live Course Demo</h2>
+            <p>Experience our advanced AI course creation system in action. This interactive demonstration showcases a complete educational content pipeline from generation to deployment.</p>
+            <a href="interactive-presentation.html" class="cta-button pulse">🎪 Launch Interactive Presentation</a>
+            <a href="https://github.com/Fadil369/academy" class="cta-button" target="_blank">📱 View Source Code</a>
+        </div>
+        
+        <div class="live-demo">
+            <h3>🌐 Multiple Access Points Available</h3>
+            <p>Choose your preferred way to experience the course:</p>
+            <div class="demo-links">
+                <a href="http://95.177.160.74:8080/interactive-presentation.html" class="demo-link" target="_blank">
+                    🖥️ Server Demo
+                </a>
+                <a href="interactive-presentation.html" class="demo-link">
+                    📱 GitHub Pages
+                </a>
+                <a href="brainsait_ai_course_backup.mbz" class="demo-link" download>
+                    📥 Download Course
+                </a>
+            </div>
+        </div>
+        
+        <div class="access-grid">
+            <div class="access-card">
+                <span class="icon">📊</span>
+                <h3>Interactive Presentation</h3>
+                <p>12 professional slides with animations, navigation, and responsive design</p>
+                <a href="interactive-presentation.html" class="access-btn">
+                    View Now
+                </a>
+            </div>
+            
+            <div class="access-card">
+                <span class="icon">📚</span>
+                <h3>Course Modules</h3>
+                <p>4 comprehensive modules covering AI content creation and LMS integration</p>
+                <a href="#modules" class="access-btn" onclick="showModules()">
+                    Explore Modules
+                </a>
+            </div>
+            
+            <div class="access-card">
+                <span class="icon">🤖</span>
+                <h3>AI Generator</h3>
+                <p>Advanced Python system for automated educational content creation</p>
+                <a href="https://github.com/Fadil369/academy/blob/main/advanced-course-generator.py" class="access-btn" target="_blank">
+                    View Code
+                </a>
+            </div>
+            
+            <div class="access-card">
+                <span class="icon">⚡</span>
+                <h3>Live Server</h3>
+                <p>Production deployment on cloud infrastructure with automated CI/CD</p>
+                <a href="http://95.177.160.74:8080/" class="access-btn" target="_blank">
+                    Visit Server
+                </a>
+            </div>
+        </div>
+        
+        <div class="stats-section">
+            <h3 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">📈 System Capabilities</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <div style="color: #7f8c8d; margin-top: 5px;">AI-Generated Modules</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <div style="color: #7f8c8d; margin-top: 5px;">Interactive Lessons</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <div style="color: #7f8c8d; margin-top: 5px;">Automated Content</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <div style="color: #7f8c8d; margin-top: 5px;">Scalability</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="modules" style="background: #34495e; color: white; padding: 30px; border-radius: 15px; margin: 30px 0; display: none;">
+            <h3 style="color: #3498db; margin-bottom: 20px;">📋 Course Structure</h3>
+            <div style="display: grid; gap: 15px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                    <strong>Module 1:</strong> AI Content Creation Fundamentals
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                    <strong>Module 2:</strong> Model Context Protocol (MCP) Integration
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                    <strong>Module 3:</strong> Moodle Integration and Deployment
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                    <strong>Module 4:</strong> Advanced Features and Future Trends
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <h3>🌟 Technology Showcase</h3>
+            <p><strong>Platform:</strong> GitHub Pages + Cloud Server</p>
+            <p><strong>Status:</strong> ✅ Live and Accessible Worldwide</p>
+            <p><strong>Repository:</strong> <a href="https://github.com/Fadil369/academy" target="_blank" style="color: #3498db;">github.com/Fadil369/academy</a></p>
+            <p style="margin-top: 20px;">
+                <em>This demonstration showcases a complete AI-powered educational technology solution with real-time content generation, automated deployment, and cross-platform compatibility.</em>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function showModules() {
+            const modulesDiv = document.getElementById('modules');
+            if (modulesDiv.style.display === 'none') {
+                modulesDiv.style.display = 'block';
+                modulesDiv.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                modulesDiv.style.display = 'none';
+            }
+        }
+        
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.access-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
